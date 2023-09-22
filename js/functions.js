@@ -1,14 +1,13 @@
-function isLonger(comparedLine, maxLength){
+function CompareString(comparedLine, maxLength){
   return comparedLine.length <= maxLength;
 }
-// console.log(isLonger('ssssss', 1050));//true
-// console.log(isLonger('aa', 1));//false
-// console.log(isLonger('aaa', 3));//true
-// console.log(isLonger('ammma', 10));//true
+// console.log(CompareString('ssssss', 1050));//true
+// console.log(CompareString('aa', 1));//false
+// console.log(CompareString('aaa', 3));//true
+// console.log(CompareString('ammma', 10));//true
 
 function isPolindrom(line){
-  line = line.replaceAll(' ', '');
-  line = line.toLowerCase();
+  line = line.replaceAll(' ', '').toLowerCase();
   const length = line.length - 1;
 
   for(let i = 0; i < length / 2; i++){
@@ -27,6 +26,7 @@ function isPolindrom(line){
 function findNumber(line){
   let result = '';
   line = line.toString();
+
   for(let i = 0; i < line.length; i++){
     const currentSymbol = line[i];
     if(currentSymbol>= '0' && currentSymbol <= '9'){
