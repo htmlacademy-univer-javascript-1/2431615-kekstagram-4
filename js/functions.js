@@ -1,10 +1,10 @@
-function CompareString(comparedLine, maxLength){
+function compareString(comparedLine, maxLength){
   return comparedLine.length <= maxLength;
 }
-// console.log(CompareString('ssssss', 1050));//true
-// console.log(CompareString('aa', 1));//false
-// console.log(CompareString('aaa', 3));//true
-// console.log(CompareString('ammma', 10));//true
+// console.log(compareString('ssssss', 1050));//true
+// console.log(compareString('aa', 1));//false
+// console.log(compareString('aaa', 3));//true
+// console.log(compareString('ammma', 10));//true
 
 function isPolindrom(line){
   line = line.replaceAll(' ', '').toLowerCase();
