@@ -21,13 +21,13 @@ const findNumber= (line) => {
   line = line.toString();
 
   for(let i = 0; i < line.length; i++){
-    const currentSymbol = line[i];
-    if(currentSymbol>= '0' && currentSymbol <= '9'){
+    const currentSymbol = parseInt(line[i], 10);
+    if(!isNaN(currentSymbol)){
       result+=currentSymbol;
     }
   }
   return parseInt(result, 10);
 };
 
-findNumber('s2');
+findNumber('s!2');
 
