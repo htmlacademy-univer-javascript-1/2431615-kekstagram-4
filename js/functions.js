@@ -16,7 +16,7 @@ const isPolindrom = (line) => {
 
 isPolindrom('bobs');
 
-const findNumber= (line) => {
+const findNumber = (line) => {
   let result = '';
   line = line.toString();
 
