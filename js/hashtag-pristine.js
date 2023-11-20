@@ -4,14 +4,12 @@ const MAX_HASHTAGS = 5;
 const formUpload = document.querySelector('.img-upload__form');
 const submitBtn = document.querySelector('#upload-submit');
 
-const pristine = new Pristine(formUpload,{
-  classTo: 'img-upload__item',
-  errorClass: 'img-upload__item--invalid',
-  successClass: 'img-upload__item--valid',
-  errorTextParent: 'img-upload__item',
-  errorTextTag: 'div',
-  errorTextClass: 'img-upload__error',
-});
+const pristine = new Pristine(formUpload, {
+  classTo: 'img-upload__field-wrapper',
+  errorTextParent: 'img-upload__field-wrapper',
+  errorTextTag: 'p',
+  errorTextClass: 'img-upload__error'
+}, true);
 
 
 const inputHashtag = document.querySelector('.text__hashtags');
@@ -85,4 +83,5 @@ inputHashtag.addEventListener('input', onHashtagInput);
 formUpload.addEventListener('submit', (evt) => {
   evt.preventDefault();
   onHashtagInput(evt);
+  pristine.validate();
 });
