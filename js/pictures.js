@@ -31,8 +31,11 @@ const createPicture = (picture) => {
 
 const createPictures = (pictures) => {
   pictures.forEach((picture) => {
+
     createPicture(picture);
+
   });
+
 
   pictureContainer.append(pictureFragments);
 };
