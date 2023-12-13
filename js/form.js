@@ -70,7 +70,6 @@ const onPlusButtonClick = () => {
 };
 
 const initButtons = () => {
-
   minusButton.addEventListener('click', onMinusButtonClick);
   plusButton.addEventListener('click', onPlusButtonClick);
 };
@@ -107,7 +106,7 @@ function onCloseFormClick (evt) {
 function onCloseFormEscDown (evt) {
 
   if(isEscKey(evt) &&
-  !evt.target.classList.contains('text__hashtag') &&
+  !evt.target.classList.contains('text__hashtags') &&
   !evt.target.classList.contains('text__description') &&
   !body.querySelector('.error'))
   {
