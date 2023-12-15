@@ -1,5 +1,6 @@
 const MAX_SYMBOLS = 20;
 const MAX_HASHTAGS = 5;
+const MAX_COMMENTS_LENGTH = 140;
 
 const formUpload = document.querySelector('.img-upload__form');
 const submitBtn = document.querySelector('#upload-submit');
@@ -80,7 +81,7 @@ const validateInput = () =>{
 
 pristine.addValidator(inputHashtag, hashtagHandler, error, 2, false);
 
-const validateDescription = (value) => value.length <= 140;
+const validateDescription = (value) => value.length <= MAX_COMMENTS_LENGTH;
 
 pristine.addValidator(
   textDescriptionInput,

@@ -16,6 +16,7 @@ const fileUpload = document.querySelector('#upload-file');
 const imagePreview = document.querySelector('.img-upload__preview img');
 const effects = document.querySelectorAll('.effects__preview');
 const mainPicture = document.querySelector('.img-upload__preview img');
+const submitButton = document.querySelector('#upload-submit');
 
 const plusButton = document.querySelector('.scale__control--bigger');
 const minusButton = document.querySelector('.scale__control--smaller');
@@ -42,7 +43,6 @@ const openForm = () => {
 
   fileUpload.addEventListener('change', onFileUploadChange);
   scaleControl.value = '100%';
-
   formUpload.addEventListener('submit', onFormUploadSubmit);
 };
 
@@ -94,6 +94,8 @@ const closeForm =  () => {
 
   scaleControl.value = '100%';
   imagePreview.style.transform = 'scale(100%)';
+
+  submitButton.disabled = false;
 
   resetFilters();
 };
